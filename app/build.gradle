@@ -18,31 +18,42 @@ android {
     }
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+            signingConfig signingConfigs.debug
+        }
+        debug {
+            debuggable true
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 
     signingConfigs {
         release {
-            storeFile rootProject.file("release.keystore")
+            storeFile file("release.keystore")
             storePassword '123456'
-            keyAlias 'release.keystore'
+            keyAlias 'tinkerdemo'
             keyPassword '123456'
         }
 
 
     }
+    signingConfigs {
+        debug {
+
+        }
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-rc02'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     // 若使用annotation需要单独引用,对于tinker的其他库都无需再引用
-    compileOnly("com.tinkerpatch.tinker:tinker-android-anno:1.9.8")
-    implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8")
+    compileOnly 'com.tinkerpatch.tinker:tinker-android-anno:1.9.8'
+    implementation 'com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8'
 }
