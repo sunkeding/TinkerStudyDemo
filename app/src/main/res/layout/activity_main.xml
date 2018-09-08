@@ -17,4 +17,9 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="下载tinker补丁" />
+    <Button
+        android:id="@+id/bt3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="第二个补丁新加一个按钮" />
 </LinearLayout>
