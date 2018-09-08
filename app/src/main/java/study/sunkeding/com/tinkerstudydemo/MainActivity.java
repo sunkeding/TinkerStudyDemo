@@ -3,7 +3,7 @@ package study.sunkeding.com.tinkerstudydemo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.tinkerpatch.sdk.TinkerPatch;
@@ -18,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initListener() {
-        findViewById(R.id.bt1).setOnClickListener(new View.OnClickListener() {
+        final Button bt=findViewById(R.id.bt1);
+        bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TextView tv = null;
-                tv.setText("d");
+//                TextView tv = null;
+//                tv.setText("d");
+                bt.setText("fix 空指针");
             }
         });
         findViewById(R.id.bt2).setOnClickListener(new View.OnClickListener() {
