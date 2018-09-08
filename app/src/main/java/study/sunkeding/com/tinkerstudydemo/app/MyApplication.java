@@ -15,14 +15,16 @@ import study.sunkeding.com.tinkerstudydemo.BuildConfig;
  * @date 2018/9/8
  * @Desc MyApplication
  */
-public class MyApplication extends Application{
-    String TAG="MyApplication";
+public class MyApplication extends Application {
+    String TAG = "MyApplication";
     private ApplicationLike tinkerApplicationLike;
+
     @Override
     public void onCreate() {
         super.onCreate();
         initTinkerPatch();
     }
+
     /**
      * 我们需要确保至少对主进程跟patch进程初始化 TinkerPatch
      */

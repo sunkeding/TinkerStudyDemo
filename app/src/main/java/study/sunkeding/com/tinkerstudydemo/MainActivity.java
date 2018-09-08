@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tinkerpatch.sdk.TinkerPatch;
 
@@ -27,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.bt2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                TinkerPatch.with().fetchPatchUpdate(true);
+                TinkerPatch tinkerPatch = TinkerPatch.with().fetchPatchUpdate(true);
+                if (tinkerPatch!=null){
+                    Toast.makeText(MainActivity.this, "tinkerPatch.getPatchVersion():" + tinkerPatch.getPatchVersion(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
