@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply from: 'tinkerpatch.gradle'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -25,4 +25,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    // 若使用annotation需要单独引用,对于tinker的其他库都无需再引用
+    compileOnly("com.tinkerpatch.tinker:tinker-android-anno:1.9.8")
+    implementation("com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.2.8")
 }
