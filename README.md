@@ -32,7 +32,7 @@ Tinker接入、学习的Demo
   
   ⑦ 把补丁传到tinker platform（http://www.tinkerpatch.com/Apps/index） 找到对应的APP及对应的APP版本号，用开发模式下发
   
-  ⑧ 下载tinkerpatch开发者工具http://www.tinkerpatch.com/Index/sdk，安装完成，打开开关，查看修复是否成功
+  ⑧ 下载tinkerpatch开发者工具http://www.tinkerpatch.com/Index/sdk  安装完成，打开开关，查看修复是否成功
   
   ⑨ 验证通过后再灰度下发或全量下发
 
