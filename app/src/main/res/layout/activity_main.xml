@@ -26,4 +26,8 @@
         android:text="再打一个补丁"
         android:layout_width="match_parent"
         android:layout_height="40dp" />
+    <TextView
+        android:text="再打第二个补丁，加了这行文字"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
