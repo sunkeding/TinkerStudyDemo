@@ -22,4 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="第二个补丁新加一个按钮" />
+    <Button
+        android:text="再打一个补丁"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
 </LinearLayout>
